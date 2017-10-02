@@ -51,24 +51,45 @@ void reordenar(Nodo *  Cabeza1,Nodo *  Cabeza2){
     }
     NodoTemp2->siguiente=NodoTemp1;
     count=0;
-    
-    NodoTemp1 = Cabeza1;
-    NodoTemp2 = Cabeza2;
-    while(count!=4){
-        NodoTemp1=NodoTemp1->siguiente;
-        count++;
-    }
-    NodoTemp1->siguiente=Cabeza2;
-    
+
     count=0;
     NodoTemp1 = Cabeza1;
     NodoTemp2 = Cabeza2;
-    while(count!=4){
+    while(count!=3){
         NodoTemp1=NodoTemp1->siguiente;
+        NodoTemp2=NodoTemp2->siguiente;
+
         count++;
     }
-    NodoTemp1->siguiente=Cabeza2;
+
     count=0;
+
+     while(count!=4){
+        NodoTemp2=NodoTemp2->siguiente;
+
+        count++;
+    }	
+
+     while(count!=3){
+        NodoTemp1=NodoTemp1->siguiente;
+
+        count++;
+    }
+    Cabeza1->siguiente=malloc(sizeof(Nodo));
+    Cabeza1->siguiente->siguiente=NodoTemp2;//2 apunta 13, 3 suelto
+    Cabeza2->siguiente=malloc(sizeof(Nodo));
+    Cabeza2->siguiente->siguiente->siguiente->siguiente=NodoTemp1;//12 apunta a 3
+    count=0;
+    
+    
+    
+    printf("\n");
+    printf("\n");
+
+    printf("%d ",NodoTemp1->dato);
+    printf("%d",NodoTemp2->dato);
+    printf("\n");
+    printf("\n");
     
 }
 
