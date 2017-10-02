@@ -60,7 +60,7 @@ reordenar (struct Nodo *Cabeza1, struct Nodo *Cabeza2)
       NodoTemp1 = NodoTemp1->siguiente;
       count++;
     }
-  NodoTemp2->siguiente = NodoTemp1;	//14 apunta a 8
+  NodoTemp2->siguiente = NodoTemp1;	//cambia el siguiente del espacio 5 en la lista 2 por el espacio 5 de la lista 1
 
   NodoTemp1 = Cabeza1;
   NodoTemp2 = Cabeza2;
@@ -79,8 +79,8 @@ reordenar (struct Nodo *Cabeza1, struct Nodo *Cabeza2)
 
       count++;
     }
-  Cabeza1->siguiente->siguiente->siguiente = NodoTemp2;	//2 apunta 13, 3 suelto
-  Cabeza2->siguiente->siguiente->siguiente->siguiente = NodoTemp1;	//12 apunta a 3
+  Cabeza1->siguiente->siguiente->siguiente = NodoTemp2;	//cambia el siguiente del espacio 2 en la lista 1 por el espacio 4 de la lista 2  
+  Cabeza2->siguiente->siguiente->siguiente->siguiente = NodoTemp1;//cambia el siguiente del espacio 3 en la lista 2 por el espacio 3 de la lista 1 
   count = 0;
 
   count = 0;
@@ -92,12 +92,12 @@ reordenar (struct Nodo *Cabeza1, struct Nodo *Cabeza2)
 
       count++;
     }
-  count = 0;
+  count = 0; 
 
 
   NodoTemp1 = NodoTemp1->siguiente;
-  Cabeza1->siguiente = NodoTemp2;	//6 apunta 11, 3 suelto
-  Cabeza2->siguiente->siguiente = NodoTemp1;	//12 apunta a 3
+  Cabeza1->siguiente = NodoTemp2;//cambia el siguiente de la cabeza en la lista 1 por el espacio 2 de la lista 1 
+  Cabeza2->siguiente->siguiente = NodoTemp1;//cambia el siguiente del espacio 2 en la lista 2 por el espacio 1 de la lista 1 
   count = 0;
 
 
@@ -115,7 +115,7 @@ reordenar (struct Nodo *Cabeza1, struct Nodo *Cabeza2)
 
 
 
-  NodoTemp1->siguiente = Cabeza2;	//4 apunta a 9
+  NodoTemp1->siguiente = Cabeza2;	//cambia el siguiente del espacio 4 en la lista 1 por la cabeza de la segunda lista
 
 
 
