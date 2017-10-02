@@ -156,16 +156,27 @@ main ()
   agregarFinal (L2, 12);
   agregarFinal (L2, 13);
   agregarFinal (L2, 14);
+  printf ("Antes:");
+  printf ("\n");
+
+  printf ("L1: ");
+
   print (L1);
   printf ("\n");
+  printf ("L2: ");
   print (L2);
   printf ("\n");
 
   reordenar (L1, L2);
+  printf ("Despues:");
+
   printf ("\n");
+  printf ("L1: ");
 
   print (L1);
   printf ("\n");
+  printf ("L2: ");
+
   print (L2);
 
   return 0;
